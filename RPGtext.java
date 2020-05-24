@@ -4,7 +4,7 @@
 //  @TADS_Turma C
 //
 //      RPG Textual desenvolvido por Julio Cesar
-//  Renan Araujo e Luan Oliveira.
+//  Renan Araujo, Thiago Gilabel e Luan Oliveira.
 //
 
 package rpgtext;
@@ -154,7 +154,7 @@ public class RPGtext {
                 + "| alguns dias sobre a casa a venda, logo ele clicou no link e não imaginava\n"
                 + "| que seria a pior escolha que teria tomado, ele foi vitima de uma \n"
                 + "| engenharia social junto com Phishing, um vírus nomeado “You’re too cool”\n"
-                + "| (você é tão legal) foi instalado no computador da empresa, o nome \n"
+                + "| (você é tao legal) foi instalado no computador da empresa, o nome \n"
                 + "| do vírus seria um agradecimento do Cracker por cair no golpe. "
                 + "\n"
                 + "| O pior de tudo isso é que um E-mail foi enviado a todos os funcionários \n"
@@ -185,11 +185,11 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| “ - Olá povo de todas as nações, como podem ter percebido, \n"
+        System.out.println("| ' - Olá povo de todas as nações, como podem ter percebido, \n"
                 + "| sofreram um ataque vindo de nosso grupo, nós somos o The Anonymous. Temos \n"
                 + "| todas as informações guardadas conosco como, arquivos secretos do governo\n"
                 + "| ,planos militares contra outros países e diversos conteudos que se soubessem \n"
-                + "| ficariam enojados.” ");
+                + "| ficariam enojados.' ");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -204,11 +204,11 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| “- O que queremos? É bem simples. Em 1 semana queremos o valor \n"
+        System.out.println("| ' - O que queremos? É bem simples. Em 1 semana queremos o valor \n"
                 + "| de 10 bilhões de dólares, ou o mundo terá todos os tipos de dados vazados,\n"
                 + "| mas não se preocupem nós iremos detalhar com mais calma de como funcionará \n"
                 + "| essa transação, por enquanto, fiquem calmos, se não o pânico tomará conta de \n"
-                + "| vocês. Até mais, meu povo.” \n"
+                + "| vocês. Até mais, meu povo.' \n"
                 + "| - Desliga o membro finalizando a transmissão. ");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
@@ -224,10 +224,10 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| “Poderia ser uma solução, mas o grupo só deu uma semana, seria tempo \n"
+        System.out.println("| ' Poderia ser uma solução, mas o grupo só deu uma semana, seria tempo \n"
                 + "| insuficiente para fazer tudo isso, ou seja, é inviávelNão vou encontrar respostas\n"
                 + "| para essa solução sozinho, talvez mais pessoas tenha conseguido quebrar a criptografia\n"
-                + "| do vírus, e só há um lugar onde poderiam discutir isso anonimamente, na Deep Web”\n"
+                + "| do vírus, e só há um lugar onde poderiam discutir isso anonimamente, na Deep Web'\n"
                 + "| Pensou " + nome);
         System.out.println("|");
         System.out.println("|-------------------------------------->");
@@ -263,6 +263,7 @@ public class RPGtext {
         System.out.println("| Você tem uma nova messagem de Melissa. Deseja abrir ela?");
         System.out.println("| 1| Sim.");
         System.out.println("| 2| Não.");
+        System.out.println("|")
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
         System.out.println("");
@@ -270,14 +271,16 @@ public class RPGtext {
         System.out.println("|   Digite algo para prosseguir...");
         System.out.println("");
         escolha = cap.nextInt();
+
+        for (int i = 0; i < 100; i++){System.out.println("");}
         
         if (escolha == 1){
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
             System.out.println("|");
-            System.out.println("| “ - Olha, garoto, não temos algum interesse ou ganho para parar a Anônimos,\n"
+            System.out.println("| ' - Olha, garoto, não temos algum interesse ou ganho para parar a Anônimos,\n"
                     + "| nem me ousaria a entrar no caminho deles, mas se quiser saber como ou quem pode detê-los\n"
-                    + "|, pergunte ao The Brain. Claro, se conseguir encontrar com ele hahahahah.");
+                    + "|, pergunte ao The Brain. Claro, se conseguir encontrar com ele hahahahah.' ");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
             System.out.println("");
@@ -293,9 +296,9 @@ public class RPGtext {
             System.out.println("| Você está na Deep Web. Ignorou a mensagem e abriu um forúm anonimo. ");
             System.out.println("");
             System.out.println("| Você leu a respeito de um  \n"
-                    + "| Hacker misterioso chamado de The Brain, \n"
-                    + "| seria um boa ideia procurar-lo \n"
-                    + "| para conseguir acabar com o Virus da The Anonymous.");
+                             + "| Hacker misterioso chamado de The Brain, \n"
+                             + "| seria um boa ideia procurar-lo \n"
+                             + "| para conseguir acabar com o Virus da The Anonymous.");
             System.out.println("|");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
