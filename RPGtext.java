@@ -18,6 +18,7 @@ public class RPGtext {
         /*---------------------------------------*/
         
         //  Este 'for' tem a utilidade de limpar o console.
+        
         //  for (int i = 0; i < 100; i++){System.out.println("");}
         
         Scanner cap = new Scanner (System.in);
