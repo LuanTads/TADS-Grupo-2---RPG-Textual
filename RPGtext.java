@@ -1,5 +1,4 @@
 /*--------------------------------------------*/
-
 //
 //  @TADS_Turma C
 //
@@ -16,10 +15,6 @@ public class RPGtext {
     public static void main(String[] args) {
         
         /*---------------------------------------*/
-        
-        //  Este 'for' tem a utilidade de limpar o console.
-        
-        //  for (int i = 0; i < 100; i++){System.out.println("");}
         
         Scanner cap = new Scanner (System.in);
         
@@ -49,27 +44,24 @@ public class RPGtext {
         
         enter = cap.next().charAt(0);
 
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
-        if (enter == 'i'){
+        if (enter == 'i') {
             System.out.println("|   Muito bem.");
             System.out.println("");
             System.out.println("|   Digite algo prosseguir...");
             continu = cap.next();
-        } else {
-            if (enter == 's'){
-                System.exit(0);
-            } else {
-                if (enter != 's'){
-                    System.exit(0);
-                }
-            }
+        } 
+        else if (enter == 's') {
+            System.exit(0);
+        } 
+        else if (enter != 's') {
+            System.exit(0);
         }
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
-        
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -81,7 +73,7 @@ public class RPGtext {
         System.out.println("");
         nome = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -91,7 +83,7 @@ public class RPGtext {
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
         System.out.println("");
-        System.out.println("|   Digite qualquer teclea para prosseguir...");
+        System.out.println("|   Digite algo para prosseguir...");
         System.out.println("");
         continu = cap.next();
         
@@ -134,7 +126,7 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -181,7 +173,7 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -200,7 +192,7 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -220,7 +212,7 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -239,7 +231,7 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -254,7 +246,7 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -264,7 +256,7 @@ public class RPGtext {
         System.out.println("| Você tem uma nova messagem de Melissa. Deseja abrir ela?");
         System.out.println("| 1| Sim.");
         System.out.println("| 2| Não.");
-        System.out.println("|")
+        System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
         System.out.println("");
@@ -273,7 +265,7 @@ public class RPGtext {
         System.out.println("");
         escolha = cap.nextInt();
 
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         if (escolha == 1){
             System.out.println("|------------------------------------------|");
@@ -309,7 +301,7 @@ public class RPGtext {
             continu = cap.next();
         }
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -326,8 +318,9 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
+        limparConsole();
         
+        do {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -344,32 +337,43 @@ public class RPGtext {
         System.out.println("|   3|   +5 Cavalo de Troia");
         System.out.println("|------------------------------------------|");
         System.out.println("");
+            atrP = cap.nextInt();
+        } while (atrP < 1 || atrP > 3);
         
-        atrP = cap.nextInt();
-        
-        if (atrP == 1){
-            System.out.println("|   Você escolheu o virus do tipo AdWare e recebeu 5 pontos");
-            for (int i = 0; i < 100; i++){System.out.println("");}
-            atrAd = 5;
-        }  
-        else if (atrP == 2){
-            System.out.println("|   Você escolheu o virus do tipo SpyWare e recebeu 5 pontos");
-            for (int i = 0; i < 100; i++){System.out.println("");}
-            atrAd = 5;
+        switch (atrP) {
+            case 1:
+                System.out.println("|   Você escolheu o virus do tipo AdWare e recebeu 5 pontos");
+                for (int i = 0; i < 100; i++) {
+                    System.out.println("");
+                }
+                atrAd = 5;
+                break;
+            case 2:
+                System.out.println("|   Você escolheu o virus do tipo SpyWare e recebeu 5 pontos");
+                for (int i = 0; i < 100; i++) {
+                    System.out.println("");
+                }
+                atrAd = 5;
+                break;
+            case 3:
+                System.out.println("|   Você escolheu o virus do tipo Cavalo de Troia e recebeu 5 pontos");
+                for (int i = 0; i < 100; i++) {
+                    System.out.println("");
+                }
+                atrCT = 5;
         }
-        else if (atrP == 3){
-            System.out.println("|   Você escolheu o virus do tipo Cavalo de Troia e recebeu 5 pontos");
-            for (int i = 0; i < 100; i++){System.out.println("");}
-        }   atrCT = 5;
         
         System.out.println("");
         System.out.println("|   Digite qualquer teclea para prosseguir...");
         continu = cap.next();
         System.out.println("");
         
-        for (int i = 0; i < 100; i++){System.out.println("");}
-        
-        
+    }   
+    
+    // Funções
 
-    }    
+    static void limparConsole(){
+        for (int i = 0; i < 100; i++){System.out.println("");}
+    }
+
 }
