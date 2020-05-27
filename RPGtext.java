@@ -55,8 +55,6 @@ public class RPGtext {
 
         limparConsole();
 
-        limparConsole();
-
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -81,6 +79,8 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
 
+        limparConsole();
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -89,7 +89,7 @@ public class RPGtext {
                 + "| através dele que se esconde quem realmente é. Ao longo do tempo as pessoas \n"
                 + "| faziam o máximo para que seus dados, ou melhor, sua vida pessoal\n"
                 + "| estivesse o mais escondido possível, as pessoas foram\n"
-                + "| mudando a forma de se “esconder”, mas tudo fica \n "
+                + "| mudando a forma de se “esconder”, mas tudo fica \n"
                 + "| diferente no século XXI que as coisas são diferentes \n"
                 + "| da era passada, com surgimento da internet a forma de comunicação \n"
                 + "| evoluíu, principalmente a tecnologia da informação e dos dados pessoais. \n"
@@ -102,9 +102,9 @@ public class RPGtext {
                 + "| era eliminar o The Creeper do computador. Os vírus foram \n"
                 + "| evoluindo sua força e proposito, atualmente, eles possuem funções de acordo com a\n"
                 + "| necessidade do Hacker/Cracker, como roubar informações, danificar a máquina do \n"
-                + "| usuário ou usá-las." + "| Sabendo de tudo isso, " + nome
-                + "decide se formar em Segurança digital\n"
-                + "| e se torna um Ethical Hacker, ou seja, um Hacker Ético com o "
+                + "| usuário ou usá-las. Sabendo de tudo isso, " + nome + "\n"
+                + "| decide se formar em Segurança digital\n"
+                + "| e se torna um Ethical Hacker, ou seja, um Hacker Ético com o \n"
                 + "| objetivo de deixar a internet mais segura \n"
                 + "| para os usuários, ele já desenvolveu diversos sistemas, já resolveu\n"
                 + "| brechas de segurança em várias empresas de grande porte como Google, Amazon,\n"
@@ -169,11 +169,11 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| ' - Olá povo de todas as nações, como podem ter percebido, \n"
+        System.out.println("| '' - Olá povo de todas as nações, como podem ter percebido, \n"
                 + "| sofreram um ataque vindo de nosso grupo, nós somos o The Anonymous. Temos \n"
-                + "| todas as informações guardadas conosco como, arquivos secretos do governo\n"
-                + "| ,planos militares contra outros países e diversos conteudos que se soubessem \n"
-                + "| ficariam enojados.' ");
+                + "| todas as informações guardadas conosco como, arquivos secretos do governo,\n"
+                + "| planos militares contra outros países e diversos conteudos que se soubessem \n"
+                + "| ficariam enojados.'' ");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -188,11 +188,11 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| ' - O que queremos? É bem simples. Em 1 semana queremos o valor \n"
+        System.out.println("| '' - O que queremos? É bem simples. Em 1 semana queremos o valor \n"
                 + "| de 10 bilhões de dólares, ou o mundo terá todos os tipos de dados vazados,\n"
                 + "| mas não se preocupem nós iremos detalhar com mais calma de como funcionará \n"
                 + "| essa transação, por enquanto, fiquem calmos, se não o pânico tomará conta de \n"
-                + "| vocês. Até mais, meu povo.' \n" + "| - Desliga o membro finalizando a transmissão. ");
+                + "| vocês. Até mais, meu povo.'' \n" + "| - Desliga o membro finalizando a transmissão. ");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -207,10 +207,10 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| ' Poderia ser uma solução, mas o grupo só deu uma semana, seria tempo \n"
+        System.out.println("| '' Poderia ser uma solução, mas o grupo só deu uma semana, seria tempo \n"
                 + "| insuficiente para fazer tudo isso, ou seja, é inviávelNão vou encontrar respostas\n"
                 + "| para essa solução sozinho, talvez mais pessoas tenha conseguido quebrar a criptografia\n"
-                + "| do vírus, e só há um lugar onde poderiam discutir isso anonimamente, na Deep Web'\n" + "| Pensou "
+                + "| do vírus, e só há um lugar onde poderiam discutir isso anonimamente, na Deep Web''\n" + "| Pensou "
                 + nome);
         System.out.println("|");
         System.out.println("|-------------------------------------->");
@@ -296,8 +296,8 @@ public class RPGtext {
         System.out.println("| Você está na Deep Web. ");
         System.out.println("|");
         System.out.println("| Novo - Você tem uma nova missão! ");
-        System.out.println("| 'Encontre o The Brain - Você deve navegar nos misteriosos foruns da Deep Web \n"
-                + "| Para encontrar o enigmatico usuario fantasma' \n");
+        System.out.println("| ''Encontre o The Brain - Você deve navegar nos misteriosos foruns da Deep Web \n"
+                + "| Para encontrar o enigmatico usuario fantasma''");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -315,7 +315,12 @@ public class RPGtext {
 
     }
 
-    // Funções
+
+
+/*--------------------------------------------*/
+                // Funções
+/*--------------------------------------------*/
+
 
     static void limparConsole() {
         for (int i = 0; i < 100; i++) {
@@ -324,6 +329,7 @@ public class RPGtext {
     }
 
     static void menuForum() {
+
         int escolhaForun = 0;
 
         System.out.println("|------------------------------------------|");
@@ -338,21 +344,26 @@ public class RPGtext {
         System.out.println("| 3| ReChat ");
         System.out.println("| 4| Ricochet ");
         System.out.println("| 5| Cryptocat ");
-        System.out.println("| 6| ESTE FORUN ESTÁ BLOQUEADO (DICA: ###.###.0.####) ");
+        System.out.println("| 6| ESTE FORUM ESTÁ BLOQUEADO (DICA: ###.###.0.####) ");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
         escolhaForun = cap.nextInt();
 
         if (escolhaForun == 1) {
+            limparConsole();
             forumUm();
         } else if (escolhaForun == 2) {
+            limparConsole();
             forumDois();
         } else if (escolhaForun == 3) {
+            limparConsole();
             forumTres();
         } else if (escolhaForun == 4) {
+            limparConsole();
             forumQuatro();
         } else if (escolhaForun == 5) {
+            limparConsole();
             forumCinco();
         }
 
@@ -361,6 +372,7 @@ public class RPGtext {
     static void forumUm() {
 
         int voltarForum = 0;
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -387,12 +399,15 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
+            limparConsole();
             menuForum();
         }
     }
 
     static void forumDois() {
+
         int voltarForum = 0;
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -427,12 +442,15 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
+            limparConsole();
             menuForum();
         }
     }
 
     static void forumTres() {
+
         int voltarForum = 0;
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -464,13 +482,16 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
+            limparConsole();
             menuForum();
         }
 
     }
 
     static void forumQuatro() {
+
         int voltarForum = 0;
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -505,13 +526,16 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
+            limparConsole();
             menuForum();
         }
 
     }
 
     static void forumCinco() {
+
         int voltarForum = 0;
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -542,6 +566,7 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
+            limparConsole();
             menuForum();
         }
 
