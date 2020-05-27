@@ -13,19 +13,20 @@ import java.util.Scanner;
 /*--------------------------------------------*/
 
 public class RPGtext {
+    
+    /*---------------------------------------*/
     // Scanner
     static Scanner cap = new Scanner(System.in);
 
+    // Variaveis
+    static int senhaUm, senhaDois, senhaTres;
+    static char enter;
+    static String continu;
+    static String nome;
+    static int escolha;
+           
+    /*---------------------------------------*/
     public static void main(String[] args) {
-
-        /*---------------------------------------*/
-
-        char enter;
-        String continu;
-        String nome;
-        int escolha;
-
-        /*---------------------------------------*/
 
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -276,7 +277,7 @@ public class RPGtext {
             System.out.println("|-------------------------------------->");
             System.out.println("|");
             System.out.println("| Você está na Deep Web. Ignorou a mensagem e abriu um forúm anonimo. ");
-            System.out.println("");
+            System.out.println("|");
             System.out.println("| Você leu a respeito de um  \n" + "| Hacker misterioso chamado de The Brain, \n"
                     + "| seria um boa ideia procurar-lo \n" + "| para conseguir acabar com o Virus da The Anonymous.");
             System.out.println("|");
@@ -297,7 +298,9 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("| Novo - Você tem uma nova missão! ");
         System.out.println("| ''Encontre o The Brain - Você deve navegar nos misteriosos foruns da Deep Web \n"
-                + "| Para encontrar o enigmatico usuario fantasma''");
+                + "| Para encontrar o enigmatico usuario fantasma.''");
+        System.out.println(
+                "| Você deve navegar em fóruns para converter numeros e \n" + "| obter o endereço IP do The Brain.");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -315,12 +318,9 @@ public class RPGtext {
 
     }
 
-
-
-/*--------------------------------------------*/
-                // Funções
-/*--------------------------------------------*/
-
+    /*--------------------------------------------*/
+    // Funções
+    /*--------------------------------------------*/
 
     static void limparConsole() {
         for (int i = 0; i < 100; i++) {
@@ -365,6 +365,9 @@ public class RPGtext {
         } else if (escolhaForun == 5) {
             limparConsole();
             forumCinco();
+        } else if (escolhaForun == 6) {
+            limparConsole();
+            forumSeis();
         }
 
     }
@@ -570,5 +573,122 @@ public class RPGtext {
             menuForum();
         }
 
+    }
+
+    static void forumSeis() {
+
+        int voltarForum = 0;
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| [Fórum] RESTRITO (SENHA) ");
+        System.out.println("|");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+
+        System.out.println("| Você deseja voltar para o menu de foruns?");
+        System.out.println("|");
+        System.out.println("| 1| Sim");
+        System.out.println("| Você obtem a senha de acesso?");
+        System.out.println("| 2| Sim");
+        voltarForum = cap.nextInt();
+
+        if (voltarForum == 1) {
+            limparConsole();
+            menuForum();
+        }
+
+        else if (voltarForum == 2) {
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | ###.###.0.####");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            senhaUm = cap.nextInt();
+        } else {
+            limparConsole();
+            acessoNegado();
+            limparConsole();
+        }
+
+        if (senhaUm == 192) {
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | 192.###.0.###");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            senhaDois = cap.nextInt();
+        } else {
+            limparConsole();
+            acessoNegado();
+            limparConsole();
+        }
+
+        if (senhaDois == 168) {
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | 192.168.0.###");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            senhaDois = cap.nextInt();
+        } else {
+            limparConsole();
+            acessoNegado();
+            limparConsole();
+        }
+
+        if (senhaDois == 184) {
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | 192.168.0.###");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            senhaTres = cap.nextInt();
+        }
+    }
+
+    static void acessoNegado() {
+        limparConsole();
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| | SENHA INCORRETA.");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+
+        forumSeis();
     }
 }
