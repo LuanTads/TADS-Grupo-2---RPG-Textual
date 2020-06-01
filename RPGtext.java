@@ -1,11 +1,14 @@
 /*--------------------------------------------*/
 //
-//  @TADS_Turma C
+//  @TADS_Turma C - Grupo 2
 //
 //      RPG Textual desenvolvido por Julio Cesar
 //  Renan Araujo, Thiago Gilabel e Luan Oliveira.
 //
+//
+/*--------------------------------------------*/
 
+// Pacotes
 package rpgtext;
 
 import java.util.Scanner;
@@ -13,8 +16,8 @@ import java.util.Scanner;
 /*--------------------------------------------*/
 
 public class RPGtext {
-    
-    /*---------------------------------------*/
+
+    /*--------------------------------------------*/
     // Scanner
     static Scanner cap = new Scanner(System.in);
 
@@ -24,8 +27,9 @@ public class RPGtext {
     static String continu;
     static String nome;
     static int escolha;
-           
-    /*---------------------------------------*/
+    static int nv = 1;
+
+    /*--------------------------------------------*/
     public static void main(String[] args) {
 
         System.out.println("|------------------------------------------|");
@@ -122,15 +126,6 @@ public class RPGtext {
         continu = cap.next();
 
         limparConsole();
-
-        System.out.println("|------------------------------------------|");
-        System.out.println("|-------------------------------------->");
-        System.out.println("|");
-        System.out.println("|   ATO I - O VIRUS ");
-        System.out.println("|");
-        System.out.println("|-------------------------------------->");
-        System.out.println("|------------------------------------------|");
-        System.out.println("");
 
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
@@ -244,7 +239,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("| Você está na Deep Web. ");
         System.out.println("|");
-        System.out.println("| Você tem uma nova messagem de Melissa. Deseja abrir ela?");
+        System.out.println("| !! - >>  Você tem uma nova messagem de Melissa. Deseja abrir ela? << - !!");
         System.out.println("| 1| Sim.");
         System.out.println("| 2| Não.");
         System.out.println("|");
@@ -261,10 +256,12 @@ public class RPGtext {
         if (escolha == 1) {
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
+            System.out.println("| | v Caixa de Mensagens");
+            System.out.println("| | > Melissa");
             System.out.println("|");
-            System.out.println("| ' - Olha, garoto, não temos algum interesse ou ganho para parar a Anônimos,\n"
-                    + "| nem me ousaria a entrar no caminho deles, mas se quiser saber como ou quem pode detê-los\n"
-                    + "|, pergunte ao The Brain. Claro, se conseguir encontrar com ele hahahahah.' ");
+            System.out.println("| | olha, garoto, não temos algum interesse ou ganho para parar a Anônimos,\n"
+                    + "| | nem me ousaria a entrar no caminho deles, mas se quiser saber como ou quem pode detê-los\n"
+                    + "| | pergunte ao The Brain. Claro, se conseguir encontrar com ele hahahahah. ");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
             System.out.println("");
@@ -294,9 +291,7 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| Você está na Deep Web. ");
-        System.out.println("|");
-        System.out.println("| Novo - Você tem uma nova missão! ");
+        System.out.println("| >> Novo - Você tem uma nova missão! <<");
         System.out.println("| ''Encontre o The Brain - Você deve navegar nos misteriosos foruns da Deep Web \n"
                 + "| Para encontrar o enigmatico usuario fantasma.''");
         System.out.println(
@@ -342,9 +337,46 @@ public class RPGtext {
         System.out.println("| 1| New World ");
         System.out.println("| 2| ForChan ");
         System.out.println("| 3| ReChat ");
+        System.out.println("| 4| ESTE FORUM ESTÁ BLOQUEADO (DICA: ###.###.0.####) ");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        escolhaForun = cap.nextInt();
+
+        if (escolhaForun == 1) {
+            limparConsole();
+            forumUm();
+        } else if (escolhaForun == 2) {
+            limparConsole();
+            forumDois();
+        } else if (escolhaForun == 3) {
+            limparConsole();
+            forumTres();
+        } else if (escolhaForun == 4) {
+            limparConsole();
+            forumSeis();
+        }
+
+    }
+
+    static void menuForumDois() {
+
+        int escolhaForun = 0;
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| Você está na Deep Web. ");
+        System.out.println("|");
+        System.out.println("| Você esta na busca de foruns. Qual Forum Deseja Acessar? ");
+        System.out.println("|");
+        System.out.println("| 1| New World ");
+        System.out.println("| 2| ForChan ");
+        System.out.println("| 3| ReChat ");
         System.out.println("| 4| Ricochet ");
-        System.out.println("| 5| Cryptocat ");
-        System.out.println("| 6| ESTE FORUM ESTÁ BLOQUEADO (DICA: ###.###.0.####) ");
+        System.out.println("| 5| CryptoCat ");
+        System.out.println("| 6| BOSS - The Brain [DERRUBADO] ");
+        System.out.println("| 7| ESTE FORUM ESTA BLOQUEADO (DICA: ###.###.0.####");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -402,9 +434,16 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
-            limparConsole();
-            menuForum();
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
         }
+
     }
 
     static void forumDois() {
@@ -445,8 +484,14 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
-            limparConsole();
-            menuForum();
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
         }
     }
 
@@ -485,8 +530,14 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
-            limparConsole();
-            menuForum();
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
         }
 
     }
@@ -526,11 +577,37 @@ public class RPGtext {
 
         System.out.println("| Você deseja voltar para o menu de foruns?");
         System.out.println("| 1| Sim");
+        System.out.println("| 2| Pensar");
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
-            limparConsole();
-            menuForum();
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
+        } else if (voltarForum == 2) {
+            System.out.println("| ");
+            System.out.println("| | Esse 623 parece estranho, talvez se eu converter em hexadecimal, ");
+            System.out.println("| | Talvez possa ser a chave de IP do Hacker Lucario");
+            System.out.println("| ");
+            System.out.println("| Você deseja voltar para o menu de foruns?");
+            System.out.println("| 1| Sim");
+            voltarForum = cap.nextInt();
+
+            if (voltarForum == 1) {
+                if (nv == 1) {
+                    limparConsole();
+                    menuForum();
+                }
+                if (nv == 2) {
+                    limparConsole();
+                    menuForumDois();
+                }
+            }
         }
 
     }
@@ -569,8 +646,14 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
-            limparConsole();
-            menuForum();
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
         }
 
     }
@@ -598,8 +681,14 @@ public class RPGtext {
         voltarForum = cap.nextInt();
 
         if (voltarForum == 1) {
-            limparConsole();
-            menuForum();
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
         }
 
         else if (voltarForum == 2) {
@@ -665,13 +754,137 @@ public class RPGtext {
             System.out.println("|-------------------------------------->");
             System.out.println("|");
             System.out.println("| [Fórum] RESTRITO (SENHA) ");
-            System.out.println("| | Digite a senha para entrar:");
-            System.out.println("| | 192.168.0.###");
+            System.out.println("| | Você conseguiu a entrar no forum. Parabéns.");
+            System.out.println("| | 192.168.0.184");
             System.out.println("| <end>");
             System.out.println("|");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
-            senhaTres = cap.nextInt();
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+
+            forumSecreto();
+        } else {
+            limparConsole();
+            acessoNegado();
+            limparConsole();
+        }
+
+    }
+
+    static void forumSecreto() {
+        limparConsole();
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| ????????");
+        System.out.println("|");
+        System.out.println("| v gaming · Agora ");
+        System.out.println("| | parabéns garoto, você conseguiu resolver meu enigma.");
+        System.out.println(
+                "| | bom, pra chegar até aqui vc deve ter muito talento, e nós da Anonimos não podemos deixar ");
+        System.out.println("| | que alguém com tanto potencial seja desperdiçado. Proponho que entre em nosso time, o");
+        System.out.println("| | que acha? ");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+
+        System.out.println("| Você aceita?");
+        System.out.println("| 1| Sim");
+        System.out.println("| 2| Não");
+        escolha = cap.nextInt();
+
+        if (escolha == 1) {
+            limparConsole();
+
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| THE BRAIN");
+            System.out.println("|");
+            System.out.println("| v gaming · Agora ");
+            System.out.println("| |... ");
+            System.out.println("|   |...  ");
+            System.out.println("|       | Muito bem, seja bem-vindo garoto, sua missão será...");
+            System.out.println("| ");
+            System.out.println("| ");
+            System.out.println("| ");
+            System.out.println("| ");
+            System.out.println("| | GAME OVER ");
+            System.out.println("| | Suas escolhas definem quem você realmente é...");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+
+            System.exit(0);
+        } else if (escolha == 2) {
+            limparConsole();
+
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| THE BRAIN");
+            System.out.println("|");
+            System.out.println("| v gaming · Agora ");
+            System.out.println("| |... ");
+            System.out.println("| |...  ");
+            System.out.println(
+                    "| | Acho que vc não sabe com quem está lidando moleque. Que seja, eu te chamei para ser   ");
+            System.out.println("| | testemunha de um novo mundo, então EU que digo, SOFRA AS CONSEQUENCIAS.");
+            System.out.println("| ");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+
+            limparConsole();
+
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| >> Novo - Você tem uma nova missão! <<");
+            System.out.println("| ''Faça o circuito logico - The Brain é um cracker da Anonymous, e voce precisa''");
+            System.out.println("| Hackerar seu PC executando este circuito logico.");
+            System.out.println("|");
+            System.out.println("|");
+            System.out.println("|");
+            System.out.println("			S			\n" + "			|			\n" + "			OR			\n"
+                    + "	|				|	\n" + "	OR				OR	\n" + " |		 |		 |		 |\n"
+                    + "AND		AND		AND		AND");
+
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("			S			\n" + "			|			\n"
+                    + "		-------	OR ------		\n" + "		|		|		\n" + "	-------	OR		OR ------	\n"
+                    + "	|				|	\n" + " ----- OR -------		 ------	OR -------\n"
+                    + " |		 |		 |		 |\n" + "AND		AND		AND		AND");
+            System.out.println("|");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+
+            nv++;
+            segundoAtoMissao();
+
         }
     }
 
@@ -690,5 +903,83 @@ public class RPGtext {
         continu = cap.next();
 
         forumSeis();
+    }
+
+    static void segundoAtoMissao() {
+
+        limparConsole();
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| Você está na Deep Web. ");
+        System.out.println("|");
+        System.out.println("| !! - >>  Você tem uma nova messagem de Desconhecido54. Deseja abrir ela? << - !!");
+        System.out.println("| 1| Sim.");
+        System.out.println("| 2| Não.");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        escolha = cap.nextInt();
+
+        if (escolha == 1) {
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("| | v Caixa de Mensagens");
+            System.out.println("| | > Desconhecido54");
+            System.out.println("|");
+            System.out.println("| | Ola, rapaz. Enfim, Fiquei sabendo que voce conseguiu derrubar um Hacker da\n"
+                    + "| | The Anonymous, parabens. Eu conheco um destes Hackers chefes, assim como o The Brai\n"
+                    + "| | Seu nome é Lucario, é tudo que eu posso falar sobre ele.");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+        } else if (escolha == 2) {
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| Você está na Deep Web. Ignorou a mensagem e abriu um forúm anonimo. ");
+            System.out.println("|");
+            System.out.println("| Você leu a respeito de um  \n" + "| Hacker Chefes da The Anonymous \n"
+                    + "| seria um boa ideia procurar-lo \n" + "| para conseguir acabar com o Virus da The Anonymous.");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+        }
+
+        limparConsole();
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| >> Novo - Você tem uma nova missão! <<");
+        System.out.println("| ''Encontre o Lucario - Você deve navegar nos misteriosos foruns da Deep Web \n"
+                + "| Para encontrar este chefe chamado de Lucario''");
+        System.out.println(
+                "| Você deve navegar em fóruns para converter numeros e \n" + "| obter o endereço IP de Lucario");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+
+        limparConsole();
+        menuForumDois();
+
     }
 }
