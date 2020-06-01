@@ -23,6 +23,7 @@ public class RPGtext {
 
     // Variaveis
     static int senhaUm, senhaDois, senhaTres;
+    static int senhaUmForumDois;
     static char enter;
     static String continu;
     static String nome;
@@ -376,7 +377,7 @@ public class RPGtext {
         System.out.println("| 4| Ricochet ");
         System.out.println("| 5| CryptoCat ");
         System.out.println("| 6| BOSS - The Brain [DERRUBADO] ");
-        System.out.println("| 7| ESTE FORUM ESTA BLOQUEADO (DICA: ###.###.0.####");
+        System.out.println("| 7| ESTE FORUM ESTA BLOQUEADO (DICA: ###)");
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
@@ -400,6 +401,9 @@ public class RPGtext {
         } else if (escolhaForun == 6) {
             limparConsole();
             forumSeis();
+        } else if (escolhaForun == 7) {
+            limparConsole();
+            forumSete();
         }
 
     }
@@ -442,6 +446,62 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
+        }
+
+    }
+
+    static void menuForumTres() {
+
+        int escolhaForun = 0;
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| Você está na Deep Web. ");
+        System.out.println("|");
+        System.out.println("| Você esta na busca de foruns. Qual Forum Deseja Acessar? ");
+        System.out.println("|");
+        System.out.println("| 1| New World ");
+        System.out.println("| 2| ForChan ");
+        System.out.println("| 3| ReChat ");
+        System.out.println("| 4| Ricochet ");
+        System.out.println("| 5| CryptoCat ");
+        System.out.println("| 6| BOSS - The Brain [DERRUBADO] ");
+        System.out.println("| 7| BOSS - LUCARIO [DERRUBADO]");
+        System.out.println("| 8| ESTE FORUM ESTÁ BLOQUEADO (DICA: ####)");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        escolhaForun = cap.nextInt();
+
+        if (escolhaForun == 1) {
+            limparConsole();
+            forumUm();
+        } else if (escolhaForun == 2) {
+            limparConsole();
+            forumDois();
+        } else if (escolhaForun == 3) {
+            limparConsole();
+            forumTres();
+        } else if (escolhaForun == 4) {
+            limparConsole();
+            forumQuatro();
+        } else if (escolhaForun == 5) {
+            limparConsole();
+            forumCinco();
+        } else if (escolhaForun == 6) {
+            limparConsole();
+            forumSeis();
+        } else if (escolhaForun == 7) {
+            limparConsole();
+            forumSete();
+        } else if (escolhaForun == 8){
+            limparConsole();
+            forumOito();
         }
 
     }
@@ -492,6 +552,10 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
         }
     }
 
@@ -537,6 +601,10 @@ public class RPGtext {
             if (nv == 2) {
                 limparConsole();
                 menuForumDois();
+            }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
             }
         }
 
@@ -589,6 +657,10 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
         } else if (voltarForum == 2) {
             System.out.println("| ");
             System.out.println("| | Esse 623 parece estranho, talvez se eu converter em hexadecimal, ");
@@ -598,15 +670,17 @@ public class RPGtext {
             System.out.println("| 1| Sim");
             voltarForum = cap.nextInt();
 
-            if (voltarForum == 1) {
-                if (nv == 1) {
-                    limparConsole();
-                    menuForum();
-                }
-                if (nv == 2) {
-                    limparConsole();
-                    menuForumDois();
-                }
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
             }
         }
 
@@ -634,7 +708,7 @@ public class RPGtext {
         System.out.println("|       | Valeu a pena. vlw mano.");
         System.out.println("|           v benks");
         System.out.println("|           | Quem quiser coisas pela metade do preço aqui");
-        System.out.println("|           | meu site: 27410274921032w.apple.");
+        System.out.println("|           | meu site: 101010011011w.apple.");
         System.out.println("|");
         System.out.println("| <end>");
         System.out.println("|");
@@ -643,7 +717,9 @@ public class RPGtext {
 
         System.out.println("| Você deseja voltar para o menu de foruns?");
         System.out.println("| 1| Sim");
+        System.out.println("| 2| Pensar");
         voltarForum = cap.nextInt();
+
 
         if (voltarForum == 1) {
             if (nv == 1) {
@@ -654,6 +730,33 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
+        }
+        if (voltarForum == 2) {
+            System.out.println("| ");
+            System.out.println("| | Talvez eu tenha que convertar algum numero desse forum ");
+            System.out.println("| | para decimal.");
+            System.out.println("| ");
+            System.out.println("| Você deseja voltar para o menu de foruns?");
+            System.out.println("| 1| Sim");
+            voltarForum = cap.nextInt();
+
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
+            
         }
 
     }
@@ -688,6 +791,10 @@ public class RPGtext {
             if (nv == 2) {
                 limparConsole();
                 menuForumDois();
+            }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
             }
         }
 
@@ -905,6 +1012,23 @@ public class RPGtext {
         forumSeis();
     }
 
+    static void acessoNegadoDois() {
+        limparConsole();
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| | SENHA INCORRETA.");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+
+        forumSete();
+    }
+
     static void segundoAtoMissao() {
 
         limparConsole();
@@ -912,7 +1036,7 @@ public class RPGtext {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
-        System.out.println("| Você está na Deep Web. ");
+        System.out.println("| | Você está na Deep Web. ");
         System.out.println("|");
         System.out.println("| !! - >>  Você tem uma nova messagem de Desconhecido54. Deseja abrir ela? << - !!");
         System.out.println("| 1| Sim.");
@@ -973,7 +1097,6 @@ public class RPGtext {
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
         System.out.println("");
-        System.out.println("");
         System.out.println("|   Digite algo para prosseguir...");
         System.out.println("");
         continu = cap.next();
@@ -981,5 +1104,254 @@ public class RPGtext {
         limparConsole();
         menuForumDois();
 
+    }
+
+    static void forumSete() {
+
+        int voltarForum = 0;
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| [Fórum] RESTRITO (SENHA) ");
+        System.out.println("|");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+
+        System.out.println("| Você deseja voltar para o menu de foruns?");
+        System.out.println("|");
+        System.out.println("| 1| Sim");
+        System.out.println("| Você obtem a senha de acesso?");
+        System.out.println("| 2| Sim");
+        voltarForum = cap.nextInt();
+
+        if (voltarForum == 1) {
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
+        }
+        else if (voltarForum == 2) {
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | ###");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            senhaUmForumDois = cap.nextInt();
+        } else {
+            limparConsole();
+            acessoNegado();
+            limparConsole();
+        }
+        
+        if (senhaUmForumDois == 193){
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | 193");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+
+            limparConsole();
+
+            forumLucario();
+        }
+        else {
+            limparConsole();
+            acessoNegadoDois();
+        }
+        
+
+        }
+    
+    static void forumLucario(){
+        limparConsole();
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| USUARIO - LUCARIO");
+        System.out.println("|");
+        System.out.println("| v lucario · Agora  ");
+        System.out.println("| | hum, quem é vc?? E como me descobriu.");
+        System.out.println("| | ahh, então foi vc que atacou meu companheiro? Estava te caçando mesmo, ninguém escapa  ");
+        System.out.println("| | da Anonymous, agora preparasse para sofrer nosso julgamento");
+        System.out.println("| | que acha? ");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+
+        limparConsole();
+
+        //Desafio
+
+        nv = 3;
+
+        menuForumTres();
+    }
+
+    static void forumOito() {
+        int voltarForum = 0;
+
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| [Fórum] RESTRITO (SENHA) ");
+        System.out.println("|");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+
+        System.out.println("| Você deseja voltar para o menu de foruns?");
+        System.out.println("|");
+        System.out.println("| 1| Sim");
+        System.out.println("| Você obtem a senha de acesso?");
+        System.out.println("| 2| Sim");
+        voltarForum = cap.nextInt();
+
+        if (voltarForum == 1) {
+            if (nv == 1) {
+                limparConsole();
+                menuForum();
+            }
+            if (nv == 2) {
+                limparConsole();
+                menuForumDois();
+            }
+            if (nv == 3){
+                limparConsole();
+                menuForumTres();
+            }
+        }
+        else if (voltarForum == 2) {
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | ####");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            senhaUmForumDois = cap.nextInt();
+        } else {
+            limparConsole();
+            acessoNegado();
+            limparConsole();
+        }
+        
+        if (senhaUmForumDois == 2715){
+            limparConsole();
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("| [Fórum] RESTRITO (SENHA) ");
+            System.out.println("| | Digite a senha para entrar:");
+            System.out.println("| | 2715");
+            System.out.println("| <end>");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+
+            limparConsole();
+
+            forumAnonymous();
+        }
+    }
+
+    static void forumAnonymous(){
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| SEDE ANONYMOUS");
+        System.out.println("|");
+        System.out.println("| v melissa · Agora  ");
+        System.out.println("| | então, vc me encontrou... fiquei surpreso ao saber que acabou com meus companheiros. ");
+        System.out.println("| | Só queríamos o dinheiro, mas parece que tens um senso de justiça muito idiota, saiba");
+        System.out.println("| | que mesmo vc me derrotando, o que é impossível claro, eu não iria desistir tão fácil");
+        System.out.println("| | então preparasse para sofrer AS CONSEQUÊNCIAS. ");
+        System.out.println("| |...");
+        System.out.println("| |...");
+        System.out.println("| |...");
+        System.out.println("| |...");
+        System.out.println("| | Agora começa a batalha final, será tudo ou nada. Preparado? ");
+        System.out.println("| | Então vamos lá. ");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+
+        //Desafio 1
+        //Desafio 2 
+        //Desafio 3
+
+        fimDeJogo();
+    
+    }
+
+    static void fimDeJogo(){
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| v ? · Agora  ");
+        System.out.println("| | Parabéns menino, você conseguiu, eu sabia que tinha talento, mas ");
+        System.out.println("| | não tanto para conseguir derrotar um grupo tão inteligente, superou totalmente ");
+        System.out.println("| | minhas expectativas. Agora vou deletar seu vírus e o seu usuário, pela sua");
+        System.out.println("| | própria segurança, lembre-se você nunca acessou a deep web, você nunca  ");
+        System.out.println("| | atacou Anonymous e nem tem ideia de como isso acabou, mas foi bom");
+        System.out.println("| | aconselhá-lo e te acompanhar por tudo isso, então Adeus, mas saiba que esse ");
+        System.out.println("| | não é nosso último encontro.");
+        System.out.println("| ");
+        System.out.println("| | FIM DE JOGO");
+        System.out.println("|");
+        System.out.println("| <end>");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
     }
 }
