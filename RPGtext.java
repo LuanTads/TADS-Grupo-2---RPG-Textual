@@ -41,7 +41,8 @@ public class RPGtext {
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
         System.out.println("");
-        System.out.println("|   Digite 'i' para iniciar ou 's' para sair.");
+        System.out.println("|   Digite 'i' para iniciar");
+        System.out.println("|   Digite 's' para sair");
         System.out.println("");
 
         enter = cap.next().charAt(0);
@@ -57,7 +58,7 @@ public class RPGtext {
             System.exit(0);
         } else if (enter != 's') {
             System.exit(0);
-        }
+        } 
 
         limparConsole();
 
@@ -322,6 +323,14 @@ public class RPGtext {
         for (int i = 0; i < 100; i++) {
             System.out.println("");
         }
+    }
+
+    static void inicio(){
+
+    }
+
+    static void opcoes(){
+
     }
 
     static void menuForum() {
@@ -1029,6 +1038,23 @@ public class RPGtext {
         forumSete();
     }
 
+    static void acessoNegadoTres() {
+        limparConsole();
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| | SENHA INCORRETA.");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+
+        forumOito();
+    }
+
     static void segundoAtoMissao() {
 
         limparConsole();
@@ -1051,6 +1077,8 @@ public class RPGtext {
         escolha = cap.nextInt();
 
         if (escolha == 1) {
+            limparConsole();
+            
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
             System.out.println("| | v Caixa de Mensagens");
@@ -1067,6 +1095,8 @@ public class RPGtext {
             System.out.println("");
             continu = cap.next();
         } else if (escolha == 2) {
+            limparConsole();
+
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
             System.out.println("|");
@@ -1257,7 +1287,7 @@ public class RPGtext {
                 menuForumTres();
             }
         }
-        else if (voltarForum == 2) {
+        if (voltarForum == 2) {
             limparConsole();
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
@@ -1270,32 +1300,31 @@ public class RPGtext {
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
             senhaUmForumDois = cap.nextInt();
-        } else {
-            limparConsole();
-            acessoNegado();
-            limparConsole();
-        }
-        
-        if (senhaUmForumDois == 2715){
-            limparConsole();
-            System.out.println("|------------------------------------------|");
-            System.out.println("|-------------------------------------->");
-            System.out.println("|");
-            System.out.println("| [Fórum] RESTRITO (SENHA) ");
-            System.out.println("| | Digite a senha para entrar:");
-            System.out.println("| | 2715");
-            System.out.println("| <end>");
-            System.out.println("|");
-            System.out.println("|-------------------------------------->");
-            System.out.println("|------------------------------------------|");
-            System.out.println("");
-            System.out.println("|   Digite algo para prosseguir...");
-            System.out.println("");
-            continu = cap.next();
 
-            limparConsole();
-
-            forumAnonymous();
+            if (senhaUmForumDois == 2715){
+                limparConsole();
+                System.out.println("|------------------------------------------|");
+                System.out.println("|-------------------------------------->");
+                System.out.println("|");
+                System.out.println("| [Fórum] RESTRITO (SENHA) ");
+                System.out.println("| | Digite a senha para entrar:");
+                System.out.println("| | 2715");
+                System.out.println("| <end>");
+                System.out.println("|");
+                System.out.println("|-------------------------------------->");
+                System.out.println("|------------------------------------------|");
+                System.out.println("");
+                System.out.println("|   Digite algo para prosseguir...");
+                System.out.println("");
+                continu = cap.next();
+    
+                limparConsole();
+    
+                forumAnonymous();
+            } else {
+                limparConsole();
+                acessoNegadoTres();
+            }
         }
     }
 
@@ -1335,6 +1364,8 @@ public class RPGtext {
     }
 
     static void fimDeJogo(){
+        limparConsole();
+
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
