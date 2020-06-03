@@ -29,36 +29,56 @@ public class RPGtext {
     static String nome;
     static int escolha;
     static int nv = 1;
+    static int opcao = 0;
 
     /*--------------------------------------------*/
     public static void main(String[] args) {
-
-        System.out.println("|------------------------------------------|");
-        System.out.println("|-------------------------------------->");
-        System.out.println("|");
-        System.out.println("|   HACKERS & CRACKERS   ");
-        System.out.println("|");
-        System.out.println("|-------------------------------------->");
-        System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite 'i' para iniciar");
-        System.out.println("|   Digite 's' para sair");
-        System.out.println("");
-
-        enter = cap.next().charAt(0);
-
         limparConsole();
 
-        if (enter == 'i') {
-            System.out.println("|   Muito bem.");
-            System.out.println("");
-            System.out.println("|   Digite algo prosseguir...");
-            continu = cap.next();
-        } else if (enter == 's') {
-            System.exit(0);
-        } else if (enter != 's') {
-            System.exit(0);
-        } 
+        do {
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|");
+            System.out.println("|   HACKERS & CRACKERS   ");
+            System.out.println("|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("|");
+            System.out.println("| 1| Jogar   ");
+            System.out.println("| 2| Instruções        ");
+            System.out.println("| 3| Créditos     ");
+            System.out.println("| 4| Sair         ");
+
+            opcao = cap.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("| Muito bem...");
+                    System.out.println("");
+                    System.out.println("|   Digite algo para prosseguir...");
+                    System.out.println("");
+                    continu = cap.next();
+                    break;
+                case 2:
+                    System.out.println("Hackers & Crackers é um jogo ficticio baseado na deep web, seu proposito é ajudar alunos que tenha dificuldade na materia de conceitos de computacao.\n"
+                            + "Nesse jogo tera dois tipos de desafios:\nas conversoes de base e portas logicas, o jogo é bem intuitivo e te ajuda no que fazer no desafio, ele tem o proposito de ser um RPG baseado em exploracao de foruns dentro da deep web.");
+                    break;
+                case 3:
+                    System.out.println("O jogo foi criado por:\n"
+                            + "Julio Cesar Pereira Santos.\n"
+                            + "Luan Costa de Oliveira.\n"
+                            + "Thiago Gilabel de Souza");
+                    break;
+                case 4:
+                    System.out.println("Obrigado por jogar");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        } while (opcao != 4 || opcao != 1);
+
+        limparConsole();
 
         limparConsole();
 
@@ -325,11 +345,11 @@ public class RPGtext {
         }
     }
 
-    static void inicio(){
+    static void inicio() {
 
     }
 
-    static void opcoes(){
+    static void opcoes() {
 
     }
 
@@ -455,7 +475,7 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
@@ -508,7 +528,7 @@ public class RPGtext {
         } else if (escolhaForun == 7) {
             limparConsole();
             forumSete();
-        } else if (escolhaForun == 8){
+        } else if (escolhaForun == 8) {
             limparConsole();
             forumOito();
         }
@@ -561,7 +581,7 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
@@ -611,7 +631,7 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
@@ -624,7 +644,6 @@ public class RPGtext {
         int voltarForum = 0;
 
         System.out.println("|------------------------------------------|");
-        System.out.println("|-------------------------------------->");
         System.out.println("|");
         System.out.println("| [Fórum] Ricochet");
         System.out.println("|");
@@ -729,7 +748,6 @@ public class RPGtext {
         System.out.println("| 2| Pensar");
         voltarForum = cap.nextInt();
 
-
         if (voltarForum == 1) {
             if (nv == 1) {
                 limparConsole();
@@ -739,7 +757,7 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
@@ -761,11 +779,11 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
-            
+
         }
 
     }
@@ -801,7 +819,7 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
@@ -1078,7 +1096,7 @@ public class RPGtext {
 
         if (escolha == 1) {
             limparConsole();
-            
+
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
             System.out.println("| | v Caixa de Mensagens");
@@ -1167,12 +1185,11 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
-        }
-        else if (voltarForum == 2) {
+        } else if (voltarForum == 2) {
             limparConsole();
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
@@ -1190,8 +1207,8 @@ public class RPGtext {
             acessoNegado();
             limparConsole();
         }
-        
-        if (senhaUmForumDois == 193){
+
+        if (senhaUmForumDois == 193) {
             limparConsole();
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
@@ -1211,16 +1228,14 @@ public class RPGtext {
             limparConsole();
 
             forumLucario();
-        }
-        else {
+        } else {
             limparConsole();
             acessoNegadoDois();
         }
-        
 
-        }
-    
-    static void forumLucario(){
+    }
+
+    static void forumLucario() {
         limparConsole();
 
         System.out.println("|------------------------------------------|");
@@ -1230,7 +1245,8 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("| v lucario · Agora  ");
         System.out.println("| | hum, quem é vc?? E como me descobriu.");
-        System.out.println("| | ahh, então foi vc que atacou meu companheiro? Estava te caçando mesmo, ninguém escapa  ");
+        System.out
+                .println("| | ahh, então foi vc que atacou meu companheiro? Estava te caçando mesmo, ninguém escapa  ");
         System.out.println("| | da Anonymous, agora preparasse para sofrer nosso julgamento");
         System.out.println("| | que acha? ");
         System.out.println("|");
@@ -1245,7 +1261,7 @@ public class RPGtext {
 
         limparConsole();
 
-        //Desafio
+        // Desafio
 
         nv = 3;
 
@@ -1282,7 +1298,7 @@ public class RPGtext {
                 limparConsole();
                 menuForumDois();
             }
-            if (nv == 3){
+            if (nv == 3) {
                 limparConsole();
                 menuForumTres();
             }
@@ -1301,7 +1317,7 @@ public class RPGtext {
             System.out.println("|------------------------------------------|");
             senhaUmForumDois = cap.nextInt();
 
-            if (senhaUmForumDois == 2715){
+            if (senhaUmForumDois == 2715) {
                 limparConsole();
                 System.out.println("|------------------------------------------|");
                 System.out.println("|-------------------------------------->");
@@ -1317,9 +1333,9 @@ public class RPGtext {
                 System.out.println("|   Digite algo para prosseguir...");
                 System.out.println("");
                 continu = cap.next();
-    
+
                 limparConsole();
-    
+
                 forumAnonymous();
             } else {
                 limparConsole();
@@ -1328,7 +1344,7 @@ public class RPGtext {
         }
     }
 
-    static void forumAnonymous(){
+    static void forumAnonymous() {
         System.out.println("|------------------------------------------|");
         System.out.println("|-------------------------------------->");
         System.out.println("|");
@@ -1355,15 +1371,15 @@ public class RPGtext {
         System.out.println("");
         continu = cap.next();
 
-        //Desafio 1
-        //Desafio 2 
-        //Desafio 3
+        // Desafio 1
+        // Desafio 2
+        // Desafio 3
 
         fimDeJogo();
-    
+
     }
 
-    static void fimDeJogo(){
+    static void fimDeJogo() {
         limparConsole();
 
         System.out.println("|------------------------------------------|");
