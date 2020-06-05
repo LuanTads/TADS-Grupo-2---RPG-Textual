@@ -2,8 +2,8 @@
 //
 //  @TADS_Turma C - Grupo 2
 //
-//      RPG Textual desenvolvido por Julio Cesar,
-//  Thiago Gilabel e Luan Oliveira.
+//      RPG Textual desenvolvido por Julio Cesar
+//  Renan Araujo, Thiago Gilabel e Luan Oliveira.
 //
 //
 /*--------------------------------------------*/
@@ -119,10 +119,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -160,10 +157,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -194,11 +188,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -213,11 +203,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -232,11 +218,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -252,11 +234,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -267,11 +245,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -340,11 +314,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
 
@@ -357,6 +327,13 @@ public class RPGtext {
     /*--------------------------------------------*/
     // Funções
     /*--------------------------------------------*/
+
+    static void prosseguir(){
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        continu = cap.next();
+    }
 
     static void limparConsole() {
         for (int i = 0; i < 100; i++) {
@@ -948,11 +925,7 @@ public class RPGtext {
                     + "| | Caso esteja com dificuldades para entrar no forum 6, saiba que a primeira senha é 192");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("|   Digite algo para prosseguir...");
-            System.out.println("");
-            continu = cap.next();
+            prosseguir();
         }
     } 
 
@@ -1003,10 +976,7 @@ public class RPGtext {
             System.out.println("|");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
-            System.out.println("");
-            System.out.println("|   Digite algo para prosseguir...");
-            System.out.println("");
-            continu = cap.next();
+            prosseguir();
 
             System.exit(0);
         } else if (escolha == 2) {
@@ -1028,10 +998,7 @@ public class RPGtext {
             System.out.println("|");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
-            System.out.println("");
-            System.out.println("|   Digite algo para prosseguir...");
-            System.out.println("");
-            continu = cap.next();
+            prosseguir();
 
             limparConsole();
             do {
@@ -1072,10 +1039,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         forumSeis();
     }
@@ -1089,10 +1053,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         forumSete();
     }
@@ -1106,10 +1067,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         forumOito();
     }
@@ -1166,10 +1124,7 @@ public class RPGtext {
             System.out.println("|");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
-            System.out.println("");
-            System.out.println("|   Digite algo para prosseguir...");
-            System.out.println("");
-            continu = cap.next();
+            prosseguir();
         }
 
         limparConsole();
@@ -1185,10 +1140,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
         menuForumDois();
@@ -1261,10 +1213,7 @@ public class RPGtext {
             System.out.println("|");
             System.out.println("|-------------------------------------->");
             System.out.println("|------------------------------------------|");
-            System.out.println("");
-            System.out.println("|   Digite algo para prosseguir...");
-            System.out.println("");
-            continu = cap.next();
+            prosseguir();
 
             limparConsole();
 
@@ -1294,10 +1243,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
         do{
@@ -1387,10 +1333,7 @@ public class RPGtext {
                 System.out.println("|");
                 System.out.println("|-------------------------------------->");
                 System.out.println("|------------------------------------------|");
-                System.out.println("");
-                System.out.println("|   Digite algo para prosseguir...");
-                System.out.println("");
-                continu = cap.next();
+                prosseguir();
 
                 limparConsole();
 
@@ -1424,10 +1367,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
 
         limparConsole();
         System.out.println("|------------------------------------------|");
@@ -1541,9 +1481,6 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-        System.out.println("");
-        System.out.println("|   Digite algo para prosseguir...");
-        System.out.println("");
-        continu = cap.next();
+        prosseguir();
     }
 }
