@@ -2,8 +2,8 @@
 //
 //  @TADS_Turma C - Grupo 2
 //
-//      RPG Textual desenvolvido por Julio Cesar
-//  Renan Araujo, Thiago Gilabel e Luan Oliveira.
+//      RPG Textual desenvolvido por Julio Cesar,
+//  Thiago Gilabel e Luan Oliveira.
 //
 //
 /*--------------------------------------------*/
@@ -11,31 +11,47 @@
 // Pacotes
 package rpgtext;
 
+//import's
 import java.util.Scanner;
+import java.util.Random;
 
 /*--------------------------------------------*/
 
 public class RPGtext {
 
-    /*--------------------------------------------*/
-    // Scanner
-    static Scanner cap = new Scanner(System.in);
+    //-----------------Scanner e Random----------------//
 
-    // Variaveis
+    static Scanner cap = new Scanner(System.in);
+    static Random aleatorio = new Random();
+
+    //--------------------Variaveis--------------------//
+
+    // Variaveis para armazenar as senhas dos foruns.
     static int senhaUm, senhaDois, senhaTres;
     static int senhaUmForumDois;
     static int senhaFinalUm, senhaFinalDois, senhaFinalTres;
     static int senhaOctal;
     static int senhaLucario;
-    static char enter;
+
+    // Variaveis para armazenar .
     static String continu;
     static String nome;
     static int escolha;
     static int nv = 1;
     static int opcao = 0;
 
+    // Vetor para armazenar a senha do forum seis.
+    static int[] ip = new int[3];
+
     /*--------------------------------------------*/
+
     public static void main(String[] args) {
+
+        // Atribuindo a senha do forum seis.
+        ip[0] = 192;
+        ip[1] = 168;
+        ip[2] = 184;
+        
         limparConsole();
 
         do {
@@ -838,7 +854,7 @@ public class RPGtext {
             limparConsole();
         }
 
-        if (senhaUm == 192) {
+        if (senhaUm == ip[0]) {
             limparConsole();
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
@@ -857,7 +873,7 @@ public class RPGtext {
             limparConsole();
         }
 
-        if (senhaDois == 168) {
+        if (senhaDois == ip[1]) {
             limparConsole();
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
@@ -876,7 +892,7 @@ public class RPGtext {
             limparConsole();
         }
 
-        if (senhaDois == 184) {
+        if (senhaDois == ip[2]) {
             limparConsole();
             System.out.println("|------------------------------------------|");
             System.out.println("|-------------------------------------->");
@@ -901,6 +917,44 @@ public class RPGtext {
         }
 
     }
+
+    static void mensagemAleatoria(){
+        System.out.println("|------------------------------------------|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|");
+        System.out.println("| | Você esta na Deep Web. ");
+        System.out.println("|");
+        System.out.println("| !! - >>  Voce tem uma nova messagem de rapazAleatorio. Deseja abrir ela? << - !!");
+        System.out.println("| 1| Sim.");
+        System.out.println("|");
+        System.out.println("|-------------------------------------->");
+        System.out.println("|------------------------------------------|");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("|   Digite algo para prosseguir...");
+        System.out.println("");
+        escolha = cap.nextInt();
+
+        if (escolha == 1) {
+            limparConsole();
+
+            System.out.println("|------------------------------------------|");
+            System.out.println("|-------------------------------------->");
+            System.out.println("| | v Caixa de Mensagens");
+            System.out.println("| | > rapazaleatorio");
+            System.out.println("|");
+            System.out.println("| | ola, garoto. eu sou um ex-membro da The Anonymous, mas\n"
+                    + "| | me arrependo muito de ter participado desta farsa, quero muito te ajudar.\n"
+                    + "| | Caso esteja com dificuldades para entrar no forum 6, saiba que a primeira senha é 192");
+            System.out.println("|-------------------------------------->");
+            System.out.println("|------------------------------------------|");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("|   Digite algo para prosseguir...");
+            System.out.println("");
+            continu = cap.next();
+        }
+    } 
 
     static void forumSecreto() {
         limparConsole();
@@ -1473,12 +1527,12 @@ public class RPGtext {
         System.out.println("|-------------------------------------->");
         System.out.println("|");
         System.out.println("| v ? · Agora  ");
-        System.out.println("| | Parabens menino, você conseguiu, eu sabia que tinha talento, mas ");
-        System.out.println("| | nao tanto para conseguir derrotar um grupo tão inteligente, superou totalmente ");
-        System.out.println("| | minhas expectativas. Agora vou deletar seu vírus e o seu usuario, pela sua");
-        System.out.println("| | propria segurança, lembre-se você nunca acessou a Deep Web, voce nunca  ");
+        System.out.println("| | Parabens, garoto, voce conseguiu, eu sabia que tinha talento, mas ");
+        System.out.println("| | nao tanto para conseguir derrotar um grupo tao inteligente, superou totalmente ");
+        System.out.println("| | minhas expectativas. Agora vou deletar seu virus e o seu usuario, pela sua");
+        System.out.println("| | propria seguranca, lembre-se voce nunca acessou a Deep Web, voce nunca  ");
         System.out.println("| | atacou The Anonymous e nem tem ideia de como isso acabou, mas foi bom");
-        System.out.println("| | aconselha-lo e te acompanhar por tudo isso, então Adeus, mas saiba que esse ");
+        System.out.println("| | aconselha-lo e te acompanhar por tudo isso, entao Adeus, mas saiba que esse ");
         System.out.println("| | nao e nosso último encontro.");
         System.out.println("| ");
         System.out.println("| | FIM DE JOGO");
@@ -1487,7 +1541,7 @@ public class RPGtext {
         System.out.println("|");
         System.out.println("|-------------------------------------->");
         System.out.println("|------------------------------------------|");
-                System.out.println("");
+        System.out.println("");
         System.out.println("|   Digite algo para prosseguir...");
         System.out.println("");
         continu = cap.next();
